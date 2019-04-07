@@ -24,4 +24,6 @@ import android.view.View;
          Intent intent=new Intent(this,Vistas.class);
          startActivity(intent);
      }
+
+
 }
