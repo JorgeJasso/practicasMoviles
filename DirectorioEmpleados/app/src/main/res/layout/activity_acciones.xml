@@ -364,6 +364,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/holo_green_dark"
+                    android:onClick="registrarEmpleado"
                     android:text="Registrar" />
 
                 <Button
@@ -372,6 +373,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/holo_blue_dark"
+                    android:onClick="modificarEmpleado"
                     android:text="Modificar" />
 
                 <Button
@@ -380,6 +382,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/holo_red_dark"
+                    android:onClick="eliminarEmpleado"
                     android:text="Eliminar" />
 
                 <Button

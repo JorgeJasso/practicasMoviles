@@ -11,6 +11,8 @@ import android.view.View;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Conexion conexion=new Conexion(this,"empleadosDB",null,1);
     }
 
     public void irAdministrar(View vista){
