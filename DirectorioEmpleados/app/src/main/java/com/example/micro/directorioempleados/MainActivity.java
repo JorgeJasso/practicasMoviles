@@ -138,11 +138,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Acciones.class);
         startActivity(intent);
     }
-
-    public void irVistas(View vista) {
-        Intent intent = new Intent(this, Vistas.class);
-        startActivity(intent);
-    }
-
-
 }

@@ -7,18 +7,21 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import java.util.ArrayList;
 
 public class Vistas extends AppCompatActivity {
+
+    public static ArrayList empleado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vistas);
 
+        empleado=(ArrayList) getIntent().getExtras().getSerializable("empleados");
         BottomNavigationView bottomBar = findViewById(R.id.bottombar);
         final Intent intent=new Intent(this,MainActivity.class);
 
-        //Cuando entre al activity el primer fragment que se visualizará será el de vista rápida.
         Fragment fragmentSeleccionado = new Rapida();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragmentSeleccionado).commit();
 
