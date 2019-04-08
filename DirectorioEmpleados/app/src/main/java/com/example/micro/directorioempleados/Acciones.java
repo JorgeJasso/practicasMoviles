@@ -2,12 +2,14 @@ package com.example.micro.directorioempleados;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
 
 public class Acciones extends AppCompatActivity {
 
@@ -117,7 +119,7 @@ public class Acciones extends AppCompatActivity {
 
     public void eliminarEmpleado(View view) {
         if (inpNumNomina.getText().toString().trim().length() > 0) {
-            if(validarExistencia()){
+            if (validarExistencia()) {
                 SQLiteDatabase db = conexion.getWritableDatabase();
                 String[] parametros = {inpNumNomina.getText().toString()};
 
@@ -125,7 +127,7 @@ public class Acciones extends AppCompatActivity {
                 limpiar();
                 Toast.makeText(getApplicationContext(), "Empleado eliminado", Toast.LENGTH_LONG).show();
                 db.close();
-            }else{
+            } else {
                 Toast.makeText(this, "El empleado no existe", Toast.LENGTH_LONG).show();
             }
         } else {
@@ -177,6 +179,18 @@ public class Acciones extends AppCompatActivity {
     }
 
     private boolean validarExistencia() {
-        return true;
+        SQLiteDatabase db = conexion.getReadableDatabase();
+        try {
+            String consulta = "SELECT " + Utilidades.CAMPO_NUM_NOMINA + " FROM " + Utilidades.TABLA_EMPLEADO +
+                    " WHERE " + Utilidades.CAMPO_NUM_NOMINA + "=?";
+            String[] parametros = {inpNumNomina.getText().toString().trim()};
+            Cursor cursor = db.rawQuery(consulta, parametros);
+            if (cursor.getCount() > 0) {
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
