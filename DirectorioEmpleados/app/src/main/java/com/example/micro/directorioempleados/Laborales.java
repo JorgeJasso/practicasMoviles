@@ -31,18 +31,18 @@ public class Laborales extends Fragment {
         txtNumNomina = view.findViewById(R.id.txtNumNomina);
         txtNumNomina.setText(Vistas.empleado.get(9).toString());
         txtArea = view.findViewById(R.id.txtArea);
-        txtArea.setText(Vistas.empleado.get(1).toString());
+        txtArea.setText(Vistas.empleado.get(10).toString());
         txtPuesto = view.findViewById(R.id.txtPuesto);
-        txtPuesto.setText(Vistas.empleado.get(1).toString());
+        txtPuesto.setText(Vistas.empleado.get(11).toString());
         txtRFC = view.findViewById(R.id.txtRFC);
-        txtRFC.setText(Vistas.empleado.get(1).toString());
+        txtRFC.setText(Vistas.empleado.get(12).toString());
         txtNSS = view.findViewById(R.id.txtNSS);
-        txtNSS.setText(Vistas.empleado.get(1).toString());
+        txtNSS.setText(Vistas.empleado.get(13).toString());
         txtEmergencia = view.findViewById(R.id.txtEmergencia);
-        txtEmergencia.setText(Vistas.empleado.get(1).toString());
+        txtEmergencia.setText(Vistas.empleado.get(14).toString());
         txtEscolaridad = view.findViewById(R.id.txtEscolaridad);
-        txtEscolaridad.setText(Vistas.empleado.get(1).toString());
+        txtEscolaridad.setText(Vistas.empleado.get(15).toString());
         txtStatus = view.findViewById(R.id.txtStatus);
-        txtStatus.setText(Vistas.empleado.get(1).toString());
+        txtStatus.setText(Vistas.empleado.get(16).toString());
     }
 }

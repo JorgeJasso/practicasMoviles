@@ -29,20 +29,20 @@ public class Personales extends Fragment {
 
     private void asignarDatos(View view) {
         txtNombre = view.findViewById(R.id.txtNombre);
-        txtNombre.setText(Vistas.empleado.get(9).toString());
+        txtNombre.setText(Vistas.empleado.get(1).toString());
         txtApellidos = view.findViewById(R.id.txtApellidos);
-        txtApellidos.setText(Vistas.empleado.get(9).toString());
+        txtApellidos.setText(Vistas.empleado.get(2).toString());
         txtDireccion = view.findViewById(R.id.txtDireccion);
-        txtDireccion.setText(Vistas.empleado.get(9).toString());
+        txtDireccion.setText(Vistas.empleado.get(3).toString());
         txtTelefono = view.findViewById(R.id.txtTelefono);
-        txtTelefono.setText(Vistas.empleado.get(9).toString());
+        txtTelefono.setText(Vistas.empleado.get(4).toString());
         txtCorreo = view.findViewById(R.id.txtCorreo);
-        txtCorreo.setText(Vistas.empleado.get(9).toString());
+        txtCorreo.setText(Vistas.empleado.get(5).toString());
         txtNacionalidad = view.findViewById(R.id.txtNacionalidad);
-        txtNacionalidad.setText(Vistas.empleado.get(9).toString());
+        txtNacionalidad.setText(Vistas.empleado.get(6).toString());
         txtEstadoCivil = view.findViewById(R.id.txtEstadoCivil);
-        txtEstadoCivil.setText(Vistas.empleado.get(9).toString());
+        txtEstadoCivil.setText(Vistas.empleado.get(7).toString());
         txtEnfermedades = view.findViewById(R.id.txtEnfermedades);
-        txtEnfermedades.setText(Vistas.empleado.get(9).toString());
+        txtEnfermedades.setText(Vistas.empleado.get(8).toString());
     }
 }

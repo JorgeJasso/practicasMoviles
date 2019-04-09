@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +11,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorAccent"
         android:orientation="vertical"
         android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="165dp"
+            android:layout_height="155dp"
+            android:layout_marginLeft="75dp"
+            android:src="@drawable/previo" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,18 +29,22 @@
 
             <TextView
                 android:id="@+id/labNombre"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:width="0dp"
                 android:paddingBottom="5dp"
                 android:text="Nombre:"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtNombre"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black" />
 
         </LinearLayout>
 
@@ -42,19 +55,23 @@
 
             <TextView
                 android:id="@+id/labApellidos"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:width="0dp"
                 android:paddingBottom="5dp"
                 android:text="Apellidos:"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtApellidos"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:color/white"
                 android:paddingBottom="5dp"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -65,19 +82,23 @@
 
             <TextView
                 android:id="@+id/labTelefono"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:width="0dp"
                 android:paddingBottom="5dp"
                 android:text="Telefono:"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtTelefono"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:color/white"
                 android:paddingBottom="5dp"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -88,19 +109,23 @@
 
             <TextView
                 android:id="@+id/labNumNomina"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:width="0dp"
                 android:paddingBottom="5dp"
                 android:text="NumNomina:"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtNumNomina"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:color/white"
                 android:paddingBottom="5dp"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -111,19 +136,23 @@
 
             <TextView
                 android:id="@+id/labPuesto"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:width="0dp"
                 android:paddingBottom="5dp"
                 android:text="Puesto:"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtPuesto"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:color/white"
                 android:paddingBottom="5dp"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -134,19 +163,23 @@
 
             <TextView
                 android:id="@+id/labStatus"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:width="0dp"
                 android:paddingBottom="5dp"
                 android:text="Status:"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtStatus"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:color/white"
                 android:paddingBottom="5dp"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
