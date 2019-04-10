@@ -20,11 +20,13 @@
             android:layout_width="165dp"
             android:layout_height="155dp"
             android:layout_marginLeft="75dp"
+            android:layout_marginBottom="5dp"
             android:src="@drawable/previo" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -33,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:width="0dp"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:text="Nombre:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -44,13 +46,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/white"
-                android:textColor="@android:color/black" />
+                android:paddingBottom="0dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -59,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:width="0dp"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:text="Apellidos:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -70,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/white"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -78,6 +83,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -86,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:width="0dp"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:text="Telefono:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -97,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/white"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -105,6 +111,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -113,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:width="0dp"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:text="NumNomina:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -124,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/white"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -132,6 +139,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -140,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:width="0dp"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:text="Puesto:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -151,14 +159,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/white"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -167,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:width="0dp"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:text="Status:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -178,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/white"
-                android:paddingBottom="5dp"
+                android:paddingBottom="0dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>

@@ -91,7 +91,7 @@ public class Acciones extends AppCompatActivity {
                 Uri photoURI = FileProvider.getUriForFile(this,
                         "com.example.android.fileprovider",
                         photoFile);
-                ruta = "Android/data/com.example.micro.directorioempleados/files/Pictures/Backup_20190408_205307_-828470184.jpg";
+                ruta = "ruta";
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI.toString());
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
@@ -109,7 +109,7 @@ public class Acciones extends AppCompatActivity {
         } else {
             if (requestCode == REQUEST_SHOW_IMAGE && resultCode == RESULT_OK) {
                 Uri path = data.getData();
-                ruta = path.toString();
+                ruta = "ruta";
                 img.setImageURI(path);
             }
         }
@@ -153,7 +153,7 @@ public class Acciones extends AppCompatActivity {
                 Toast.makeText(this, "El número de nomina ya existe", Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(this, "Debes ingresar todos los campos", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debes ingresar todos los campos e imagen", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -189,7 +189,7 @@ public class Acciones extends AppCompatActivity {
                 Toast.makeText(this, "El empleado no existe", Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(this, "Debes ingresar todos los campos", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debes ingresar todos los campos e imagen", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -217,6 +217,7 @@ public class Acciones extends AppCompatActivity {
     }
 
     private void limpiar() {
+        ruta = "";
         inpNombre.setText("");
         inpApellidos.setText("");
         inpDireccion.setText("");
@@ -236,7 +237,8 @@ public class Acciones extends AppCompatActivity {
     }
 
     private boolean validarLlenado() {
-        return inpNombre.getText().toString().trim().length() > 0 &&
+        return ruta.length() > 0 &&
+                inpNombre.getText().toString().trim().length() > 0 &&
                 inpApellidos.getText().toString().trim().length() > 0 &&
                 inpDireccion.getText().toString().trim().length() > 0 &&
                 inpTelefono.getText().toString().trim().length() > 0 &&
