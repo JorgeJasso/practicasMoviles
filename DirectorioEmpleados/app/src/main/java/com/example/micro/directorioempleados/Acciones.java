@@ -33,7 +33,7 @@ public class Acciones extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_SHOW_IMAGE = 10;
     private ImageView img;
-    private String ruta;
+    //private String ruta;
     private EditText inpNombre, inpApellidos, inpDireccion, inpTelefono, inpCorreo, inpNacionalidad, inpEstadoCivil,
             inpEnfermedades, inpNumNomina, inpArea, inpPuesto, inpRFC, inpNSS, inpEmergencia, inpEscolaridad, inpStatus;
     private Conexion conexion;
@@ -91,7 +91,7 @@ public class Acciones extends AppCompatActivity {
                 Uri photoURI = FileProvider.getUriForFile(this,
                         "com.example.android.fileprovider",
                         photoFile);
-                ruta = "ruta";
+                //ruta = "ruta";
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI.toString());
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
@@ -109,7 +109,7 @@ public class Acciones extends AppCompatActivity {
         } else {
             if (requestCode == REQUEST_SHOW_IMAGE && resultCode == RESULT_OK) {
                 Uri path = data.getData();
-                ruta = "ruta";
+                //ruta = "ruta";
                 img.setImageURI(path);
             }
         }
@@ -127,7 +127,7 @@ public class Acciones extends AppCompatActivity {
                 SQLiteDatabase db = conexion.getWritableDatabase();
 
                 ContentValues values = new ContentValues();
-                values.put(Utilidades.CAMPO_IMAGEN, ruta);
+                values.put(Utilidades.CAMPO_IMAGEN, "img");
                 values.put(Utilidades.CAMPO_NOMBRE, inpNombre.getText().toString());
                 values.put(Utilidades.CAMPO_APELLIDOS, inpApellidos.getText().toString());
                 values.put(Utilidades.CAMPO_DIRECCION, inpDireccion.getText().toString());
@@ -153,7 +153,7 @@ public class Acciones extends AppCompatActivity {
                 Toast.makeText(this, "El número de nomina ya existe", Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(this, "Debes ingresar todos los campos e imagen", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debes ingresar todos los campos", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -164,7 +164,7 @@ public class Acciones extends AppCompatActivity {
                 String[] parametros = {inpNumNomina.getText().toString()};
 
                 ContentValues values = new ContentValues();
-                values.put(Utilidades.CAMPO_IMAGEN, ruta);
+                values.put(Utilidades.CAMPO_IMAGEN, "img");
                 values.put(Utilidades.CAMPO_NOMBRE, inpNombre.getText().toString());
                 values.put(Utilidades.CAMPO_APELLIDOS, inpApellidos.getText().toString());
                 values.put(Utilidades.CAMPO_DIRECCION, inpDireccion.getText().toString());
@@ -189,7 +189,40 @@ public class Acciones extends AppCompatActivity {
                 Toast.makeText(this, "El empleado no existe", Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(this, "Debes ingresar todos los campos e imagen", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debes ingresar todos los campos", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void buscarEmpleado(View view) {
+        SQLiteDatabase db = conexion.getReadableDatabase();
+        if (inpNumNomina.getText().toString().trim().length() > 0) {
+            String consulta = "SELECT * FROM " + Utilidades.TABLA_EMPLEADO +
+                    " WHERE " + Utilidades.CAMPO_NUM_NOMINA + "=?";
+            String[] parametros = {inpNumNomina.getText().toString().trim()};
+            Cursor cursor = db.rawQuery(consulta, parametros);
+            cursor.moveToFirst();
+            if (cursor.getCount() != 0) {
+                inpNombre.setText(cursor.getString(1));
+                inpApellidos.setText(cursor.getString(2));
+                inpDireccion.setText(cursor.getString(3));
+                inpTelefono.setText(cursor.getString(4));
+                inpCorreo.setText(cursor.getString(5));
+                inpNacionalidad.setText(cursor.getString(6));
+                inpEstadoCivil.setText(cursor.getString(7));
+                inpEnfermedades.setText(cursor.getString(8));
+                inpNumNomina.setText(cursor.getString(9));
+                inpArea.setText(cursor.getString(10));
+                inpPuesto.setText(cursor.getString(11));
+                inpRFC.setText(cursor.getString(12));
+                inpNSS.setText(cursor.getString(13));
+                inpEmergencia.setText(cursor.getString(14));
+                inpEscolaridad.setText(cursor.getString(15));
+                inpStatus.setText(cursor.getString(16));
+            } else {
+                Toast.makeText(this, "El empleado no existe", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            Toast.makeText(this, "Ingresa el numero de nomina del empleado", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -217,7 +250,7 @@ public class Acciones extends AppCompatActivity {
     }
 
     private void limpiar() {
-        ruta = "";
+        //ruta = "";
         inpNombre.setText("");
         inpApellidos.setText("");
         inpDireccion.setText("");
@@ -237,8 +270,7 @@ public class Acciones extends AppCompatActivity {
     }
 
     private boolean validarLlenado() {
-        return ruta.length() > 0 &&
-                inpNombre.getText().toString().trim().length() > 0 &&
+        return inpNombre.getText().toString().trim().length() > 0 &&
                 inpApellidos.getText().toString().trim().length() > 0 &&
                 inpDireccion.getText().toString().trim().length() > 0 &&
                 inpTelefono.getText().toString().trim().length() > 0 &&
