@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ServiciosWeb</string>
+    <string name="id">ID</string>
+    <string name="usuario">Usuario</string>
+    <string name="clave">Clave</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidoP">Apellido P</string>
+    <string name="apellidoM">Apellido M</string>
+    <string name="crear">Crear</string>
+    <string name="seleccionar">Ver</string>
+    <string name="actualizar">Modifica</string>
+    <string name="eliminar">Borrar</string>
+</resources>
